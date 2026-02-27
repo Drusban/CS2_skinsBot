@@ -5,12 +5,12 @@ from aiogram.filters import CommandStart,Command
 from aiogram.fsm.state import State,StatesGroup
 from aiogram.fsm.context import FSMContext
 import requests
-from CounterStrikeBot.app.parser_skins import parser
+from app.parser_skins import parser
 from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup
-from CounterStrikeBot.app.keyboard import start_keyboard,payment
-from CounterStrikeBot.config import ADMIN_ID,TOKEN
+from app.keyboard import start_keyboard,payment
+from config import ADMIN_ID,TOKEN
 from datetime import datetime
-from CounterStrikeBot.database import BroadCast,User,SessionLocal
+from database import BroadCast,User,SessionLocal
 
 
 router = Router()
@@ -418,3 +418,4 @@ async def skin_restart(callback: CallbackQuery):
             [InlineKeyboardButton(text="🏠 Главное меню", callback_data="main_menu")]
         ])
         await callback.message.edit_text("❌ Скины не найдены", reply_markup=error_keyboard)
+
