@@ -206,4 +206,5 @@ class SkinParser:
 
 
 # Создаем глобальный экземпляр парсера с лимитом 1000 скинов
+
 parser = SkinParser(max_skins=2000)
